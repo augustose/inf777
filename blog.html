@@ -7,35 +7,48 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="main-header">
+  <!-- Encabezado común a todas las páginas -->
+  <header class="common-header">
     <div class="container">
-      <h1><a href="index.html">TecnoBlog</a></h1>
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="blog.html" class="active">Blog</a>
-      </nav>
+      <h1>TecnoBlog</h1>
+      <p>Las últimas novedades en tecnología, innovación y gadgets.</p>
     </div>
   </header>
-  <main class="main-content">
-    <section class="blog-list">
-      <h2>Últimas novedades</h2>
-      <article class="blog-post">
-        <h3>La IA revoluciona el desarrollo web</h3>
-        <p class="date">10 de junio de 2024</p>
-        <p>Las nuevas herramientas de inteligencia artificial están cambiando la forma en que diseñamos y programamos sitios web, permitiendo mayor eficiencia y creatividad.</p>
-      </article>
-      <article class="blog-post">
-        <h3>Top 5 gadgets para 2024</h3>
-        <p class="date">8 de junio de 2024</p>
-        <p>Desde relojes inteligentes hasta auriculares con cancelación de ruido, estos son los dispositivos que marcarán tendencia este año.</p>
-      </article>
-      <article class="blog-post">
-        <h3>¿Vale la pena migrar a Wi-Fi 7?</h3>
-        <p class="date">5 de junio de 2024</p>
-        <p>Analizamos las ventajas y desventajas de la nueva generación de redes inalámbricas y si realmente necesitas actualizar tus dispositivos.</p>
-      </article>
-    </section>
-  </main>
+  <!-- Wrapper para el contenido (main y aside) -->
+  <div class="wrapper">
+    <!-- Columna de menú lateral (aside) común a todas las páginas -->
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="#">Acerca de</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <section class="blog-list">
+        <h2>Últimas novedades</h2>
+        <article class="blog-post">
+          <h3>La IA revoluciona el desarrollo web</h3>
+          <p class="date">10 de junio de 2024</p>
+          <p>Las nuevas herramientas de inteligencia artificial están cambiando la forma en que diseñamos y programamos sitios web, permitiendo mayor eficiencia y creatividad.</p>
+        </article>
+        <article class="blog-post">
+          <h3>Top 5 gadgets para 2024</h3>
+          <p class="date">8 de junio de 2024</p>
+          <p>Desde relojes inteligentes hasta auriculares con cancelación de ruido, estos son los dispositivos que marcarán tendencia este año.</p>
+        </article>
+        <article class="blog-post">
+          <h3>¿Vale la pena migrar a Wi-Fi 7?</h3>
+          <p class="date">5 de junio de 2024</p>
+          <p>Analizamos las ventajas y desventajas de la nueva generación de redes inalámbricas y si realmente necesitas actualizar tus dispositivos.</p>
+        </article>
+      </section>
+    </main>
+  </div>
   <footer class="main-footer">
     <div class="container">
       <p>&copy; 2024 TecnoBlog. Todos los derechos reservados.</p>

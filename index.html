@@ -7,19 +7,35 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="main-header">
+  <!-- Encabezado común a todas las páginas -->
+  <header class="common-header">
     <div class="container">
       <h1>TecnoBlog</h1>
       <p>Las últimas novedades en tecnología, innovación y gadgets.</p>
-      <a href="blog.html" class="btn-main">Ver Blog</a>
     </div>
   </header>
-  <main class="main-content">
-    <section class="about">
-      <h2>Bienvenido a TecnoBlog</h2>
-      <p>Descubre las tendencias, noticias y análisis sobre el mundo tecnológico. ¡Mantente actualizado con nosotros!</p>
-    </section>
-  </main>
+  <!-- Wrapper para el contenido (main y aside) -->
+  <div class="wrapper">
+    <!-- Columna de menú lateral (aside) común a todas las páginas -->
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#">Acerca de</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <section class="about">
+        <h2>Bienvenido a TecnoBlog</h2>
+        <p>Descubre las tendencias, noticias y análisis sobre el mundo tecnológico. ¡Mantente actualizado con nosotros!</p>
+        <a href="blog.html" class="btn-main">Ver Blog</a>
+      </section>
+    </main>
+  </div>
   <footer class="main-footer">
     <div class="container">
       <p>&copy; 2024 TecnoBlog. Todos los derechos reservados.</p>
