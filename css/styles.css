@@ -11,20 +11,61 @@ body {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-.main-header {
+/* Encabezado común a todas las páginas */
+.common-header {
   background: linear-gradient(90deg, #2b5876 0%, #4e4376 100%);
   color: #fff;
   padding: 3rem 0 2rem 0;
   text-align: center;
 }
-.main-header h1 {
+.common-header h1 {
   font-size: 2.8rem;
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
 }
-.main-header p {
+.common-header p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
+}
+/* Wrapper para el contenido (main y aside) */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+/* Columna de menú lateral (aside) común a todas las páginas */
+aside.sidebar {
+  flex: 0 0 200px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(46,67,118,0.05);
+  padding: 1.5rem;
+  margin-right: 2rem;
+}
+aside.sidebar nav ul {
+  list-style: none;
+}
+aside.sidebar nav ul li {
+  margin-bottom: 0.5rem;
+}
+aside.sidebar nav ul a {
+  display: block;
+  color: #4e4376;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.2s;
+}
+aside.sidebar nav ul a:hover, aside.sidebar nav ul a.active {
+  color: #2b5876;
+  text-decoration: underline;
+}
+/* Contenido principal */
+main.main-content {
+  flex: 1;
+  min-width: 0;
 }
 .btn-main {
   display: inline-block;
@@ -40,24 +81,6 @@ body {
 .btn-main:hover {
   background: #4e4376;
   color: #fff;
-}
-nav {
-  margin-top: 1rem;
-}
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: 500;
-  opacity: 0.85;
-  transition: opacity 0.2s;
-}
-nav a.active, nav a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-.main-content {
-  padding: 2rem 0 3rem 0;
 }
 .about {
   background: #fff;
@@ -105,7 +128,9 @@ nav a.active, nav a:hover {
   margin-top: 2rem;
 }
 @media (max-width: 600px) {
-  .main-header h1 { font-size: 2rem; }
-  .about, .blog-post { padding: 1rem; }
-  .container { padding: 0 0.5rem; }
+  .common-header h1 { font-size: 2rem; }
+  .about, .blog-post, aside.sidebar { padding: 1rem; }
+  .container, .wrapper { padding: 0 0.5rem; }
+  .wrapper { flex-direction: column; }
+  aside.sidebar { margin-right: 0; margin-bottom: 1.5rem; }
 } 
